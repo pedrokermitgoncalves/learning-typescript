@@ -1,4 +1,4 @@
-namespace App {
+
   //Autobind
   export function AutoBind(
     _target: any,
@@ -16,4 +16,4 @@ namespace App {
 
     return adjustedDescriptor;
   }
-}
+
