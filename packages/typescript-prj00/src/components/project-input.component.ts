@@ -1,4 +1,7 @@
 /// <reference path="base.component.ts"/>
+/// <reference path="../decorators/autobind.ts" />
+/// <reference path="../util/validation.ts" />
+/// <reference path="../state/state.ts" />
 
 namespace App {
   // ProjectInput class
