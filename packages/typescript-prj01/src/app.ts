@@ -1,27 +1,11 @@
-import "reflect-metadata";
-//import { plainToClass } from "class-transformer";
-import { Product } from "./product.model";
-import { validate } from "class-validator";
+const form = document.querySelector("form")!;
+const addressInput = document.getElementById("address")! as HTMLInputElement;
 
-const newProd = new Product("", -5);
+function searchAdressHandler(event: Event) {
+  event.preventDefault();
+  const enteredAddress = addressInput.value;
 
-validate(newProd).then(errors => {
-  if (errors.length > 0) {
-    console.log(errors);
-  } else {
-    console.log(newProd.getInformatioon());
-  }
-});
+  //send this to google's API
+}
 
-// const products = [
-//   { title: "Carpet", price: 29.99 },
-//   { title: "Book", price: 10.99 }
-// ];
-
-// const p1 = new Product("book", 15.99);
-// console.log(p1.getInformatioon());
-
-//const loadedProducts = plainToClass(Product, products);
-// for (const product of loadedProducts) {
-//   console.log(product.getInformatioon());
-// }
+form.addEventListener("submit", searchAdressHandler);
